@@ -53,7 +53,8 @@
     k3-mode
     ledger-mode
     multi-term
-    purescript-mode))
+    purescript-mode
+    scala-mode))
 
 ;; install new packages and init already installed packages
 (el-get 'sync my-packages)
@@ -99,8 +100,6 @@
 (add-hook 'term-mode-hook                linum-disable)
 (add-hook 'multi-term-mode-hook          linum-disable)
 (add-hook 'haskell-interactive-mode-hook linum-disable)
-
-(load-theme 'solarized t)
 
 (windmove-default-keybindings 'meta)
 (defvar windmove-wrap-around)
@@ -168,6 +167,7 @@
  ;; If there is more than one, they won't work right.
  '(create-lockfiles nil)
  '(ede-project-directories (quote ("/home/remy/Documents/ResearchWork/KHaskell/k")))
+ '(frame-background-mode (quote dark))
  '(haskell-complete-module-preferred
    (quote
     ("Data.ByteString" "Data.ByteString.Lazy" "Data.Conduit" "Data.Function" "Data.List" "Data.Map" "Data.Maybe" "Data.Monoid" "Data.Ord")))
@@ -177,7 +177,7 @@
  '(haskell-interactive-mode-scroll-to-bottom t)
  '(haskell-mode-hook
    (quote
-    (interactive-haskell-mode turn-on-haskell-indentation turn-on-haskell-doc-mode)))
+    (interactive-haskell-mode turn-on-haskell-indentation turn-on-haskell-doc-mode)) t)
  '(haskell-notify-p t)
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-generate-tags nil)
@@ -211,3 +211,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(load-theme 'solarized t)
+
+(setq c-default-style "linux")
+(setq-default c-basic-offset 4
+              tab-width 4)
