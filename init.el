@@ -102,9 +102,10 @@
 (add-hook 'multi-term-mode-hook          linum-disable)
 (add-hook 'haskell-interactive-mode-hook linum-disable)
 
-(windmove-default-keybindings 'meta)
-(defvar windmove-wrap-around)
-(setq windmove-wrap-around t)
+;; Uncomment to bind meta arrows to change panes
+;; (windmove-default-keybindings 'meta)
+;; (defvar windmove-wrap-around)
+;; (setq windmove-wrap-around t)
 
 (setq x-select-enable-clipboard t)
 
