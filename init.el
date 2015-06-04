@@ -102,8 +102,8 @@
 (add-hook 'term-mode-hook                linum-disable)
 (add-hook 'multi-term-mode-hook          linum-disable)
 (add-hook 'haskell-interactive-mode-hook linum-disable)
-;; (add-hook 'java-mode-hook
-;;           (lambda () (flycheck-select-checker 'java-pmd)))
+(add-hook 'java-mode-hook
+          (lambda () (interactive) (flycheck-select-checker 'java-pmd)))
 (setq exec-path (append exec-path '("~/.emacs.d/bin")))
 
 ;; Uncomment to bind meta arrows to change panes
