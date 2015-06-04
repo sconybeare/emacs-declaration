@@ -87,7 +87,8 @@
 (scroll-bar-mode -1)                    ; no scroll bars
 (menu-bar-mode -1)
 
-(setq default-frame-alist '((font . "Inconsolata-12")))
+;; Uncomment this line if you don't have/want Inconsolata
+(setq default-frame-alist '((font . "Inconsolata-10")))
 
 (global-hl-line-mode)                   ; highlight current line
 (global-linum-mode 1)                   ; add line numbers on the left
