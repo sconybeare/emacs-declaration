@@ -204,7 +204,7 @@
 
 (provide 'init)
 
-(server-start)
+;;(server-start) ;; uncomment if emacs.service is not present
 ;;; init.el ends here
 (put 'upcase-region 'disabled nil)
 (custom-set-faces
