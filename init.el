@@ -203,6 +203,8 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 (provide 'init)
+
+(server-start)
 ;;; init.el ends here
 (put 'upcase-region 'disabled nil)
 (custom-set-faces
