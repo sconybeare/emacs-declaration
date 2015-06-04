@@ -1,0 +1,6 @@
+(:name flycheck-pmd
+       :description "Flycheck support for PMD"
+       :type github
+       :pkgname "taktoa/flycheck-pmd"
+       :depends (flycheck let-alist)
+       :features flycheck-pmd)
