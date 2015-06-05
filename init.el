@@ -106,10 +106,10 @@
           (lambda () (interactive) (flycheck-select-checker 'java-pmd)))
 (setq exec-path (append exec-path '("~/.emacs.d/bin")))
 
-;; Uncomment to bind meta arrows to change panes
-;; (windmove-default-keybindings 'meta)
-;; (defvar windmove-wrap-around)
-;; (setq windmove-wrap-around t)
+;; Comment to unbind meta arrows to change panes
+(windmove-default-keybindings 'meta)
+(defvar windmove-wrap-around)
+(setq windmove-wrap-around t)
 
 (setq x-select-enable-clipboard t)
 
@@ -173,6 +173,9 @@
  ;; If there is more than one, they won't work right.
  '(create-lockfiles nil)
  '(ede-project-directories (quote ("/home/remy/Documents/ResearchWork/KHaskell/k")))
+ '(flycheck-pmd-rulesets
+   (quote
+    ("java-basic" "java-design" "java-imports" "java-braces" "java-optimizations")))
  '(frame-background-mode (quote dark))
  '(haskell-complete-module-preferred
    (quote
