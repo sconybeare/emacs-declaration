@@ -55,13 +55,17 @@
     multi-term
     purescript-mode
     scala-mode
-    flycheck-pmd))
+    flycheck-pmd
+    undo-tree))
 
 ;; install new packages and init already installed packages
 (el-get 'sync my-packages)
 
 ;; remove all packages not listed
 (el-get-cleanup my-packages)
+
+(require 'undo-tree)
+(global-undo-tree-mode)
 
 (require 'cedet-remove-builtin)
 
