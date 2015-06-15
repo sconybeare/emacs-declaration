@@ -138,6 +138,7 @@
 (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key [f5] 'compile)
 (global-set-key [f6] 'recompile)
+(setq-default compilation-scroll-output t)
 
 (electric-indent-mode +1)
 
@@ -212,6 +213,17 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 (provide 'init)
+
+(defun revert-all-buffers ()
+  "Refreshes all open buffers from their restpective files."
+  (interactive)
+  (dolist (buf (buffer-list))
+    (with-current-buffer buf
+      (when (and (buffer-file-name)
+                 (file-exists-p (buffer-file-name))
+                 (not (buffer-modified-p)) )
+        (revert-buffer t t t) )))
+  (message "Refreshed open files.") )
 
 ;;(server-start) ;; uncomment if emacs.service is not present
 ;;; init.el ends here
