@@ -177,6 +177,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(create-lockfiles nil)
+ '(display-buffer-alist (quote (("" ignore (reusable-frames . t) (nil)))))
  '(ede-project-directories (quote ("/home/remy/Documents/ResearchWork/KHaskell/k")))
  '(flycheck-pmd-rulesets
    (quote
