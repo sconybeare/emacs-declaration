@@ -56,7 +56,9 @@
     purescript-mode
     scala-mode
     flycheck-pmd
-    undo-tree))
+    undo-tree
+    multiple-cursors
+    evil))
 
 ;; install new packages and init already installed packages
 (el-get 'sync my-packages)
@@ -82,6 +84,8 @@
 ;; (require 'semantic/db-javap)
 ;; (semantic-mode 1)
 ;; (global-ede-mode t)
+(require 'multiple-cursors)
+(require 'evil-mode)
 
 ;; on to the visual settings
 (setq inhibit-splash-screen t)          ; no splash screen, thanks
@@ -246,3 +250,8 @@
 (setq c-default-style "linux")
 (setq-default c-basic-offset 4
               tab-width 4)
+
+(setq multi-term-program-switches "--login")
+
+(setq cua-enable-cua-keys nil)
+(setq cua-delete-selection nil)
