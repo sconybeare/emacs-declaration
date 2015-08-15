@@ -85,7 +85,9 @@
 ;; (semantic-mode 1)
 ;; (global-ede-mode t)
 (require 'multiple-cursors)
-(require 'evil-mode)
+
+(require 'evil)
+(evil-mode 1)
 
 ;; on to the visual settings
 (setq inhibit-splash-screen t)          ; no splash screen, thanks
